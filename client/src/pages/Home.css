@@ -1,0 +1,118 @@
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--sw-text);
+  letter-spacing: -0.5px;
+}
+
+.hero-highlight {
+  color: var(--sw-purple);
+}
+
+.hero-sub {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: var(--sw-text-secondary);
+  line-height: 1.6;
+}
+
+.hero-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ===== How section ===== */
+.how-section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--sw-text);
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.how-card {
+  background: var(--sw-white);
+  border: 1px solid var(--sw-border-light);
+  border-radius: var(--sw-radius-lg);
+  padding: 1.5rem;
+}
+
+.how-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--sw-purple-light);
+  color: var(--sw-purple);
+  border-radius: var(--sw-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.how-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--sw-text);
+}
+
+.how-card p {
+  font-size: 0.85rem;
+  color: var(--sw-text-secondary);
+  line-height: 1.5;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 1rem 0 0;
+  background: var(--sw-white);
+  border: 1px solid var(--sw-border-light);
+  border-radius: var(--sw-radius-lg);
+}
+
+.cta-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.cta-section p {
+  color: var(--sw-text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .hero-title { font-size: 1.6rem; }
+  .hero-sub { font-size: 0.95rem; }
+  .hero { padding: 2.5rem 0.5rem 2rem; }
+}

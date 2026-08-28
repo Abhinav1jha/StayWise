@@ -1,0 +1,50 @@
+.favorites-page { max-width: 960px; }
+
+.fav-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.fav-header h1 { font-size: 1.3rem; font-weight: 600; }
+.fav-count { font-size: 0.85rem; color: var(--sw-text-muted); }
+
+.fav-loading { color: var(--sw-text-muted); }
+.fav-error { color: var(--sw-red); }
+
+.fav-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--sw-text-muted);
+}
+.fav-empty p { margin-bottom: 1rem; }
+
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.fav-card-wrap {
+  position: relative;
+}
+
+.fav-remove-btn {
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+  padding: 0.4rem;
+  background: var(--sw-white);
+  color: var(--sw-text-muted);
+  border: 1px solid var(--sw-border-light);
+  border-top: none;
+  border-radius: 0 0 var(--sw-radius-lg) var(--sw-radius-lg);
+  font-size: 0.78rem;
+  font-family: var(--sw-font);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.fav-remove-btn:hover {
+  color: var(--sw-red);
+  background: var(--sw-red-light);
+}

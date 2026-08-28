@@ -1,0 +1,200 @@
+/* ===== StayWise Design System ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --sw-white: #ffffff;
+  --sw-bg: #f8f9fb;
+  --sw-bg-alt: #f1f3f7;
+  --sw-text: #1a1a2e;
+  --sw-text-secondary: #5f6577;
+  --sw-text-muted: #8e95a9;
+  --sw-border: #e2e5ec;
+  --sw-border-light: #eef0f4;
+  --sw-purple: #6246ea;
+  --sw-purple-light: #ede9fe;
+  --sw-purple-hover: #5338d4;
+  --sw-green: #16a34a;
+  --sw-green-light: #dcfce7;
+  --sw-amber: #d97706;
+  --sw-amber-light: #fef3c7;
+  --sw-red: #dc2626;
+  --sw-red-light: #fee2e2;
+  --sw-star: #f59e0b;
+
+  /* Spacing */
+  --sw-radius-sm: 4px;
+  --sw-radius: 6px;
+  --sw-radius-md: 8px;
+  --sw-radius-lg: 12px;
+
+  /* Shadows */
+  --sw-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --sw-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --sw-shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --sw-shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
+
+  /* Typography */
+  --sw-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sw-font);
+  background: var(--sw-bg);
+  color: var(--sw-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ===== Base Elements ===== */
+a {
+  color: var(--sw-purple);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--sw-purple-hover);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--sw-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: var(--sw-font);
+  line-height: 1.4;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--sw-purple);
+  color: var(--sw-white);
+  border-color: var(--sw-purple);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--sw-purple-hover);
+  border-color: var(--sw-purple-hover);
+}
+
+.btn-secondary {
+  background: var(--sw-white);
+  color: var(--sw-text);
+  border-color: var(--sw-border);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--sw-bg-alt);
+  border-color: var(--sw-text-muted);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+/* ===== Inputs ===== */
+.input, input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], select, textarea {
+  padding: 0.5rem 0.75rem;
+  background: var(--sw-white);
+  border: 1px solid var(--sw-border);
+  border-radius: var(--sw-radius);
+  color: var(--sw-text);
+  font-size: 0.875rem;
+  font-family: var(--sw-font);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--sw-purple);
+  box-shadow: 0 0 0 3px var(--sw-purple-light);
+}
+input::placeholder, textarea::placeholder {
+  color: var(--sw-text-muted);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--sw-white);
+  border: 1px solid var(--sw-border-light);
+  border-radius: var(--sw-radius-lg);
+  box-shadow: var(--sw-shadow-sm);
+}
+
+/* ===== Badges ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--sw-radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.badge-green { background: var(--sw-green-light); color: var(--sw-green); }
+.badge-amber { background: var(--sw-amber-light); color: var(--sw-amber); }
+.badge-red { background: var(--sw-red-light); color: var(--sw-red); }
+.badge-purple { background: var(--sw-purple-light); color: var(--sw-purple); }
+
+/* ===== Status ===== */
+.status-available { background: var(--sw-green-light); color: var(--sw-green); }
+.status-limited { background: var(--sw-amber-light); color: var(--sw-amber); }
+.status-full { background: var(--sw-red-light); color: var(--sw-red); }
+
+/* ===== Page placeholders ===== */
+.page h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.page p {
+  color: var(--sw-text-secondary);
+}
+
+/* ===== Utility ===== */
+.text-muted { color: var(--sw-text-muted); }
+.text-secondary { color: var(--sw-text-secondary); }
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}

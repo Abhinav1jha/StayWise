@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6c5ce7;
+  --primary-light: #a29bfe;
+  --accent: #00cec9;
+  --bg-dark: #0a0a1a;
+  --bg-card: #13132b;
+  --text-primary: #f0f0f5;
+  --text-secondary: #a0a0b8;
+  --success: #00b894;
+  --error: #ff7675;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.logo-accent {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.health-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.health-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.35);
+}
+
+.health-btn:active {
+  transform: translateY(0);
+}
+
+.health-status {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+}
+
+.health-status.success {
+  color: var(--success);
+  background: rgba(0, 184, 148, 0.1);
+  border: 1px solid rgba(0, 184, 148, 0.25);
+}
+
+.health-status.error {
+  color: var(--error);
+  background: rgba(255, 118, 117, 0.1);
+  border: 1px solid rgba(255, 118, 117, 0.25);
+}

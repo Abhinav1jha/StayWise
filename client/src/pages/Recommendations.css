@@ -1,0 +1,128 @@
+.recs-page { max-width: 900px; }
+
+.recs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.recs-header h1 { font-size: 1.3rem; font-weight: 600; }
+.recs-sub { color: var(--sw-text-secondary); font-size: 0.9rem; margin-top: 0.2rem; }
+
+.recs-loading { color: var(--sw-text-muted); }
+.recs-error { color: var(--sw-red); }
+
+.recs-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--sw-text-muted);
+}
+.recs-hint { font-size: 0.85rem; margin-top: 0.3rem; }
+
+/* ===== List ===== */
+.recs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--sw-white);
+  border: 1px solid var(--sw-border-light);
+  border-radius: var(--sw-radius-lg);
+  padding: 0.8rem;
+}
+
+.rec-rank {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--sw-text-muted);
+  min-width: 28px;
+  padding-top: 0.4rem;
+  text-align: center;
+}
+
+.rec-card-wrap {
+  width: 260px;
+  min-width: 260px;
+}
+
+.rec-card-wrap .hostel-card {
+  border: none;
+  box-shadow: none;
+}
+.rec-card-wrap .hostel-card:hover {
+  box-shadow: none;
+}
+
+.rec-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 0.4rem;
+}
+
+.rec-score-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.rec-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sw-purple);
+}
+
+.rec-score-label {
+  font-size: 0.8rem;
+  color: var(--sw-text-muted);
+}
+
+.rec-explain {
+  background: var(--sw-bg-alt);
+  border-radius: var(--sw-radius-md);
+  padding: 0.6rem 0.8rem;
+}
+
+.rec-explain-title {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--sw-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.25rem;
+}
+
+.rec-explain p {
+  font-size: 0.8rem;
+  color: var(--sw-text-secondary);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .recs-header { flex-direction: column; }
+
+  .rec-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .rec-rank {
+    text-align: left;
+    padding-top: 0;
+  }
+  .rec-card-wrap {
+    width: 100%;
+    min-width: unset;
+  }
+}
