@@ -32,7 +32,7 @@
 }
 .hl-search {
   width: 100%;
-  padding: 0.55rem 0.75rem 0.55rem 2.3rem;
+  padding: 0.55rem 0.75rem 0.55rem 2.3rem !important;
   font-size: 0.88rem;
   background: var(--sw-white);
   border: 1px solid var(--sw-border);
@@ -97,8 +97,8 @@
 
 /* ===== Sidebar ===== */
 .hl-sidebar {
-  width: 200px;
-  min-width: 200px;
+  width: 210px;
+  min-width: 210px;
   background: var(--sw-white);
   border: 1px solid var(--sw-border-light);
   border-radius: var(--sw-radius-lg);
@@ -107,6 +107,7 @@
   top: 62px;
   max-height: calc(100vh - 78px);
   overflow-y: auto;
+  padding-bottom: 1.2rem;
 }
 .hl-sidebar-head {
   display: flex;

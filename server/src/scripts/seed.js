@@ -68,7 +68,7 @@ const hostelsData = [
     pricing: { monthlyRent: 6000, securityDeposit: 6000 },
     roomTypes: [{ name: 'Triple', occupancy: 3, price: 6000 }, { name: 'Four-Bed', occupancy: 4, price: 4500 }],
     gender: 'male', amenities: ['wifi', 'meals', 'laundry', 'water purifier'],
-    images: ['https://images.unsplash.com/photo-1595599512605-1c444a1be8c5?w=600&q=80'],
+    images: ['https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80'],
     availability: { status: 'available', bedsAvailable: 12 } },
 
   // --- BANGALORE (4) ---
@@ -176,7 +176,7 @@ const hostelsData = [
     pricing: { monthlyRent: 9000, securityDeposit: 18000 },
     roomTypes: [{ name: 'Double', occupancy: 2, price: 9000 }, { name: 'Triple', occupancy: 3, price: 7000 }],
     gender: 'male', amenities: ['wifi', 'laundry', 'water purifier', 'power backup'],
-    images: ['https://images.unsplash.com/photo-1600566753086-00f18f6b5eb0?w=600&q=80'],
+    images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80'],
     availability: { status: 'available', bedsAvailable: 6 } },
 
   { name: 'Powai Lake PG', type: 'pg', description: 'Serene PG overlooking Powai Lake, close to IIT Bombay. AC rooms, healthy meals, and a reading lounge with lake views.',

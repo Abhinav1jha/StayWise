@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import env from './config/env.js';
 import authRoutes from './routes/authRoutes.js';
 import hostelRoutes from './routes/hostelRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
@@ -33,10 +34,11 @@ app.use((_req, res) => {
 // --------------- Global Error Handler ------------
 app.use((err, _req, res, _next) => {
   console.error(err.stack);
-  res.status(err.statusCode || 500).json({
-    success: false,
-    message: err.message || 'Internal Server Error',
-  });
+  const statusCode = err.statusCode || 500;
+  const message = statusCode === 500 && env.NODE_ENV === 'production'
+    ? 'Internal Server Error'
+    : err.message || 'Internal Server Error';
+  res.status(statusCode).json({ success: false, message });
 });
 
 export default app;

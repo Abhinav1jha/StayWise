@@ -167,19 +167,17 @@ function HostelList() {
 
           <div className="fl-section">
             <span className="fl-label">Property</span>
-            <div className="fl-row">
-              <select value={filters.type} onChange={(e) => handleFilterChange('type', e.target.value)}>
-                <option value="">All Types</option>
-                <option value="hostel">Hostel</option>
-                <option value="pg">PG</option>
-              </select>
-              <select value={filters.gender} onChange={(e) => handleFilterChange('gender', e.target.value)}>
-                <option value="">All Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="coed">Coed</option>
-              </select>
-            </div>
+            <select value={filters.type} onChange={(e) => handleFilterChange('type', e.target.value)}>
+              <option value="">All Types</option>
+              <option value="hostel">Hostel</option>
+              <option value="pg">PG</option>
+            </select>
+            <select value={filters.gender} onChange={(e) => handleFilterChange('gender', e.target.value)}>
+              <option value="">All Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="coed">Coed</option>
+            </select>
             <select value={filters.availability} onChange={(e) => handleFilterChange('availability', e.target.value)}>
               <option value="">Any Availability</option>
               <option value="available">Available</option>

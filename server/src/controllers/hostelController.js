@@ -145,6 +145,11 @@ export const getHostel = async (req, res, next) => {
 // POST /api/hostels
 export const createHostel = async (req, res, next) => {
   try {
+    // Prevent client from injecting server-computed fields
+    delete req.body.ratings;
+    delete req.body.totalReviews;
+    delete req.body.createdBy;
+
     const hostel = await Hostel.create({
       ...req.body,
       createdBy: req.user._id,
@@ -176,8 +181,10 @@ export const updateHostel = async (req, res, next) => {
       return res.status(403).json({ success: false, message: 'Not authorized to update this hostel' });
     }
 
-    // Prevent changing createdBy
+    // Prevent changing server-computed fields
     delete req.body.createdBy;
+    delete req.body.ratings;
+    delete req.body.totalReviews;
 
     const updated = await Hostel.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
